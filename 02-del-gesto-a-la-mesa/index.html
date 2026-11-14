@@ -23,13 +23,13 @@
     <p class="lead-copy">Cocina de acento español cerca del parque El Virrey: tortillas, tapas, arroces y platos de la parrilla y el horno de leña.</p>
     <div class="actions"><a class="button primary reserve-cta" href="#reservas" data-booking-link>Reservar <span aria-hidden="true">↗</span></a><a class="button" href="#carta">Ver carta <span aria-hidden="true">↓</span></a><a class="button secondary" href="#visita">Visita <span aria-hidden="true">↗</span></a></div>
   </div>
-  <figure class="hero-scene" data-cut="0">
+  <figure class="hero-scene">
     <div class="photo-frame" id="encuadre">
       <div class="paper-stack" aria-hidden="true">
         <div class="paper-piece paper-tl"></div>
         <div class="paper-piece paper-br"></div>
       </div>
-      <div class="frame-annotation"><span class="ann-a">01 <b></b> El gesto</span><span class="ann-b">02 <b></b> La mesa · misma toma</span></div>
+      <div class="frame-annotation" aria-hidden="true"><span class="ann-a">01 <b></b> El gesto</span><span class="ann-b">02 <b></b> La mesa · misma toma</span></div>
       <svg class="hero-line" viewBox="0 0 400 420" preserveAspectRatio="none" aria-hidden="true"><path d="M0 323H88L162 247H400M0 341H96L170 265H400"/></svg>
       <div class="photo-wrap">
         <img class="photo-main" src="assets/acabado.webp" srcset="assets/acabado-640.webp 640w, assets/acabado.webp 1350w" sizes="(max-width: 700px) 94vw, 50vw" width="1350" height="1800" fetchpriority="high" alt="Un cocinero sostiene un utensilio sobre una mesa de madera. La tortilla está en primer plano y al fondo se ve la sala de ladrillo.">
@@ -40,14 +40,9 @@
       </div>
       <div class="cut-edge cut-edge-tl" aria-hidden="true"></div>
       <div class="cut-edge cut-edge-br" aria-hidden="true"></div>
-      <button type="button" class="cut-tab" id="cut-tab" aria-controls="encuadre" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" role="slider" aria-valuetext="Corte cerrado sobre el gesto" aria-label="Abrir el corte del papel" style="touch-action:none" hidden>
-        <span class="cut-tab-grip" aria-hidden="true"></span>
-        <span class="cut-tab-label">Corte</span>
-      </button>
     </div>
     <figcaption>
       <span>Acabado en mesa <small>Sancho / El Tiempo</small></span>
-      <button class="frame-toggle" type="button" aria-controls="encuadre" aria-pressed="false" hidden>Abrir el corte <span aria-hidden="true">⤢</span></button>
     </figcaption>
   </figure>
 </section>
@@ -86,59 +81,24 @@
     <details><summary>El origen de la tortilla vaga</summary><p>Gallinas y Valientes rinde homenaje a la tortilla vaga de Sacha Hormaechea. En Madrid, Sacha la cuaja por debajo sin voltearla. La foto de apertura registra un acabado en mesa en Bogotá, no una forma de servicio garantizada.</p></details>
   </div>
 
-  <div class="tintas" id="tintas" data-pass="0" data-view="room">
-    <div class="tintas-head">
-      <div class="house-controls">
-        <button type="button" aria-pressed="true" data-house="room">01 / Sala</button>
-        <button type="button" aria-pressed="false" data-house="crew">02 / Equipo</button>
-      </div>
-      <p class="tintas-proof" aria-live="polite">Prueba <b id="proof-num">01</b> · una tinta</p>
+  <div class="tintas" id="tintas">
+    <div class="house-controls tintas-head" role="group" aria-label="Fotografías de La casa" hidden>
+      <button type="button" aria-pressed="true" data-house="room" aria-controls="tintas-fotos">01 / Sala</button>
+      <button type="button" aria-pressed="false" data-house="crew" aria-controls="tintas-fotos">02 / Equipo</button>
     </div>
-    <div class="tintas-bed" aria-label="Mesa de serigrafía de La casa">
-      <svg class="ink-defs" width="0" height="0" aria-hidden="true">
-        <defs>
-          <filter id="ink-plum" color-interpolation-filters="sRGB">
-            <feColorMatrix type="matrix" values="0.15 0.15 0.15 0 0.15
-                                                 0.05 0.05 0.05 0 0.05
-                                                 0.12 0.12 0.12 0 0.18
-                                                 0 0 0 1 0"/>
-          </filter>
-          <filter id="ink-yellow" color-interpolation-filters="sRGB">
-            <feColorMatrix type="matrix" values="0.55 0.55 0.55 0 0.45
-                                                 0.42 0.42 0.42 0 0.35
-                                                 0.08 0.08 0.08 0 0.05
-                                                 0 0 0 0.85 0"/>
-          </filter>
-          <filter id="ink-pink" color-interpolation-filters="sRGB">
-            <feColorMatrix type="matrix" values="0.55 0.55 0.55 0 0.40
-                                                 0.28 0.28 0.28 0 0.22
-                                                 0.35 0.35 0.35 0 0.30
-                                                 0 0 0 0.8 0"/>
-          </filter>
-        </defs>
-      </svg>
-      <div class="tintas-paper">
-        <div class="ink-layer ink-base"><img class="ink-img" data-src-room="assets/sala.webp" data-src-crew="assets/equipo.webp" src="assets/sala.webp" srcset="assets/sala-640.webp 640w, assets/sala.webp 1350w" sizes="(max-width:700px) 90vw, 560px" width="1350" height="1800" alt="Mesa de madera puesta junto a un muro de ladrillo, con un paso abierto al fondo." loading="lazy"></div>
-        <div class="ink-layer ink-y" aria-hidden="true"><img src="assets/sala.webp" alt="" loading="lazy"></div>
-        <div class="ink-layer ink-p" aria-hidden="true"><img src="assets/sala.webp" alt="" loading="lazy"></div>
-        <div class="ink-layer ink-k" aria-hidden="true"><img src="assets/sala.webp" alt="" loading="lazy"></div>
-        <div class="ink-layer ink-true" aria-hidden="true"><img src="assets/sala.webp" alt="" loading="lazy"></div>
-        <div class="reg-ink" aria-hidden="true">
-          <span class="ri ri-y">＋</span><span class="ri ri-p">＋</span><span class="ri ri-k">＋</span>
+    <div class="tintas-bed" id="tintas-fotos">
+      <figure class="tintas-view" data-view="room">
+        <div class="tintas-paper">
+          <img src="assets/sala.webp" srcset="assets/sala-640.webp 640w, assets/sala.webp 1350w" sizes="(max-width: 700px) 90vw, 55vw" width="1350" height="1800" alt="Mesa de madera junto a un muro de ladrillo, con un paso abierto al fondo." decoding="async" fetchpriority="low">
         </div>
-        <div class="wipe" aria-hidden="true"><span class="wipe-edge"></span></div>
-        <div class="squeegee" id="squeegee" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="Sin pasadas de tinta" aria-label="Arrastre la rasqueta para pasar tinta" style="touch-action:pan-y" hidden>
-          <span class="sq-blade"></span>
-          <span class="sq-bead"></span>
-          <span class="sq-handle"></span>
+        <figcaption class="tintas-cap"><span>La sala</span><small>Sancho / El Tiempo</small></figcaption>
+      </figure>
+      <figure class="tintas-view" data-view="crew" hidden>
+        <div class="tintas-paper">
+          <img src="assets/equipo.webp" srcset="assets/equipo-640.webp 640w, assets/equipo.webp 1350w" sizes="(max-width: 700px) 90vw, 55vw" width="1350" height="1101" alt="Tres integrantes del equipo, con delantales ocres, junto al pase." decoding="async" fetchpriority="low">
         </div>
-      </div>
-      <figcaption class="tintas-cap"><span id="tintas-cap-label">La sala</span><small>Sancho / El Tiempo</small></figcaption>
-    </div>
-    <div class="tintas-controls">
-      <button type="button" class="pasar-tinta">Pasar tinta</button>
-      <button type="button" class="nueva-prueba">Nueva prueba</button>
-      <span class="tintas-hint">Arrastre la rasqueta · tres tintas · registro</span>
+        <figcaption class="tintas-cap"><span>El equipo</span><small>Sancho / El Tiempo</small></figcaption>
+      </figure>
     </div>
   </div>
 </section>

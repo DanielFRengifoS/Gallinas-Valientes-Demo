@@ -253,16 +253,29 @@
     if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(snapTarget(Math.max(0, p - 0.5))); }
   });
 
-  // Menu family index (preserved)
-  var families = [].slice.call(document.querySelectorAll('.menu-index a'));
-  function markFamily() {
+  // Menu families select in place. Keep hrefs for direct links and the no-JS fallback.
+  var menuSpread = document.querySelector('.menu-spread');
+  var families = [].slice.call(menuSpread.querySelectorAll('.menu-index a'));
+  function markFamily(hash) {
     families.forEach(function (link) {
-      if (link.hash === location.hash) link.setAttribute('aria-current', 'location');
+      var active = link.hash === hash;
+      var section = document.getElementById(link.hash.slice(1));
+      if (active) link.setAttribute('aria-current', 'true');
       else link.removeAttribute('aria-current');
+      if (section) section.toggleAttribute('data-family-active', active);
     });
   }
-  window.addEventListener('hashchange', markFamily);
-  markFamily();
+  families.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      if (event.defaultPrevented || event.button !== 0 ||
+          event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      markFamily(link.hash);
+    });
+  });
+  window.addEventListener('hashchange', function () { markFamily(location.hash); });
+  menuSpread.setAttribute('data-family-in-place', '');
+  markFamily(location.hash);
 
   render(0);
 })();

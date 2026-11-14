@@ -1,10 +1,10 @@
 # Gallinas y Valientes · Tres demos en un solo sitio
 
-Este ZIP **ya está listo para subir**. Las tres demos se despliegan juntas. El `index.html` de la raíz es el selector que permite verlas sin salir del sitio. No necesitas crear tres proyectos ni instalar dependencias.
+Este ZIP **ya está listo para subir**. Las tres demos se despliegan juntas. El `index.html` de la raíz abre la bienvenida de GTL AI. **Empezar el demo** revela el selector 01, 02 y 03 sin salir del sitio. No necesitas crear tres proyectos ni instalar dependencias.
 
 ## 1. Probar antes de subir
 
-Descomprime el ZIP y abre **el `index.html` de la raíz**. Pulsa los tres botones del selector y comprueba que cada portada tiene **Reservar · Ver carta · Visita**.
+Descomprime el ZIP y abre **el `index.html` de la raíz**. Pulsa **Empezar el demo** y prueba los tres botones del selector. Comprueba que cada portada tiene **Reservar · Ver carta · Visita**.
 
 Si el navegador no carga las páginas al abrir el archivo directamente, abre una terminal en esa misma carpeta y ejecuta:
 
@@ -37,7 +37,8 @@ Cuando el restaurante confirme el enlace oficial HTTPS:
 
 ## 4. Links para el pitch
 
-- `/` abre el selector con la demo 01.
+- `/` abre la bienvenida. Pulsa **Empezar el demo** para entrar en la 01.
+- `/#01` va directo al selector en la demo 01.
 - `/#02` abre el selector directamente en la demo 02.
 - `/#03` abre el selector directamente en la demo 03.
 - `/02-del-gesto-a-la-mesa/` abre solo la demo 02, sin el selector. Lo mismo funciona con `/01-mesa-ab/` y `/03-desde-la-mesa/`.
